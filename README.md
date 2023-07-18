@@ -1,7 +1,7 @@
 # azure-openai
 
 ## Core Technology
-- Node.js
+- TypeScript
 - React
 - Azure OpenAI Service
 - Azure App Service
