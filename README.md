@@ -5,3 +5,4 @@
 - React
 - Azure OpenAI Service
 - Azure App Service
+- Terraform
