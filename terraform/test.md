@@ -1,0 +1,2 @@
+export ARM_SUBSCRIPTION_ID=cda6bd1c-c03b-40b5-a211-9b0bd4583a14
+export ARM_TENANT_ID=a7e4486c-c794-4f5f-a372-ac53bd6d79e5

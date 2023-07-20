@@ -1,0 +1,37 @@
+name: PUSH_B) Backend Deploy
+
+on:
+  push:
+    paths:
+      - backend/**
+      - .github/workflows/backend.yml
+    branches-ignore:
+      - releases/**
+      - master
+
+env:
+  AZURE_WEBAPP_NAME: openai90393d6b
+  AZURE_WEBAPP_PACKAGE_PATH: '.'
+  NODE_VERSION: '16.x'
+  
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      # source checkout
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Setup Node.js
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      # Deploy to Azure Web apps
+      # - uses: azure/webapps-deploy@v2
+      #   with:
+      #     app-name: ${{ env.AZURE_WEBAPP_NAME }}
+      #     publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+      #     package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
