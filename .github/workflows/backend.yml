@@ -1,6 +1,13 @@
 name: PUSH_B) Backend Deploy
 
 on:
+  push:
+    paths:
+      - backend/**
+      - .github/workflows/backend.yml
+    branches-ignore:
+      - releases/**
+      - master
   workflow_dispatch:
 
 # on:
