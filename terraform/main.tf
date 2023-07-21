@@ -26,11 +26,11 @@ provider "azurerm" {
     }
   }
 
-  use_msi = true
+  # use_msi = true
 }
 
 provider "azuread" {
-  use_msi = true
+  # use_msi = true
 }
 
 resource "azurerm_resource_group" "this" {
