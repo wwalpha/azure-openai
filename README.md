@@ -16,6 +16,7 @@
 - Cognitive Search (Basic)
   - $80.3/month
 - App Service Plan (Free Plan)
+  - 60 CPU minutes/day
 
 ## 向いてない事
 - 画像関連の文章
