@@ -38,5 +38,5 @@ jobs:
       - name: Apply Terraform 
         run: |
           terraform init
-          terraform plan -out=plan -compact-warnings
-          terraform apply "plan"
+          terraform plan -out=results -compact-warnings
+          terraform apply "results"
