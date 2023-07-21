@@ -25,10 +25,8 @@ resource "azurerm_linux_web_app" "this" {
     container_registry_use_managed_identity = true
 
     application_stack {
-      docker_image_name        = "openai:latest"
-      docker_registry_username = var.acr_admin_username
-      docker_registry_password = var.acr_admin_password
-      docker_registry_url      = "https://${var.acr_login_server}"
+      docker_image_name   = "openai:latest"
+      docker_registry_url = "https://${var.acr_login_server}"
     }
   }
 

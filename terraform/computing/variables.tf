@@ -6,6 +6,6 @@ variable "suffix" {}
 
 variable "acr_login_server" {}
 
-variable "acr_admin_username" {}
+# variable "acr_admin_username" {}
 
-variable "acr_admin_password" {}
+# variable "acr_admin_password" {}
