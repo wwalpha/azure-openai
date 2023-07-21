@@ -1,5 +1,8 @@
 # azure-openai
 
+## 事前準備
+- You can apply for access to Azure OpenAI Service by completing the form at https://aka.ms/oai/access
+
 ## Core Technology
 - TypeScript
 - React
