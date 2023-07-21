@@ -37,6 +37,12 @@ resource "azurerm_linux_web_app" "this" {
   app_settings = {
     WEBSITES_ENABLE_APP_SERVICE_STORAGE = false
     WEBSITES_PORT                       = 8080
+    OPENAI_ACCESS_KEY                   = azurerm_cognitive_account.this.primary_access_key
+    OPENAI_ENDPOINT                     = azurerm_cognitive_account.this.endpoint
+  }
+
+  lifecycle {
+    ignore_changes = [site_config.0.application_stack.0.docker_image_name]
   }
 }
 
