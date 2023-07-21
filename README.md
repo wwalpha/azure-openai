@@ -8,6 +8,15 @@
 - Azure App Service
 - Terraform
 
+## Total Costs
+一番安いの `East US` リージョンを基準とする
+
+- OpenAI Service
+  - OnDemand
+- Cognitive Search (Basic)
+  - $80.3/month
+- App Service Plan (Free Plan)
+
 ## 向いてない事
 - 画像関連の文章
   - 文章のみの回答は理解できない
