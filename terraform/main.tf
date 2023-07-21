@@ -69,4 +69,7 @@ module "computing" {
   suffix                  = local.suffix
   resource_group_name     = azurerm_resource_group.this.name
   resource_group_location = azurerm_resource_group.this.location
+  acr_admin_username      = module.storage.container_registry_admin_username
+  acr_admin_password      = module.storage.container_registry_admin_password
+  acr_login_server        = module.storage.container_registry_login_server
 }

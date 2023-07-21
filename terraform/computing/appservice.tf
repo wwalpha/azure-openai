@@ -23,18 +23,14 @@ resource "azurerm_linux_web_app" "this" {
     always_on           = false
     minimum_tls_version = 1.2
   }
-}
 
-# ----------------------------------------------------------------------------------------------
-# Deploy code from a public GitHub repo
-# ----------------------------------------------------------------------------------------------
-# resource "azurerm_app_service_source_control" "sourcecontrol" {
-#   app_id                 = azurerm_linux_web_app.this.id
-#   repo_url               = "https://github.com/Azure-Samples/nodejs-docs-hello-world"
-#   branch                 = "master"
-#   use_manual_integration = true
-#   use_mercurial          = false
-# }
+  app_settings = {
+    DOCKER_REGISTRY_SERVER_URL      = var.acr_login_server
+    DOCKER_REGISTRY_SERVER_USERNAME = var.acr_admin_username
+    DOCKER_REGISTRY_SERVER_PASSWORD = var.acr_admin_password
+    WEBSITES_PORT                   = 8080
+  }
+}
 
 # ----------------------------------------------------------------------------------------------
 # Azure Static Web App
