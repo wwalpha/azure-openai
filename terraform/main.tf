@@ -1,6 +1,10 @@
 terraform {
-  backend "local" {
-    path = "./tfstate/terraform.tfstate"
+  cloud {
+    organization = "wwalpha"
+
+    workspaces {
+      name = "openai-demo"
+    }
   }
 
   required_providers {

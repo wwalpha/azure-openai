@@ -3,5 +3,5 @@ variable "resource_group_name" {
 }
 
 variable "resource_group_location" {
-  default = "Japan East"
+  default = "East US"
 }
