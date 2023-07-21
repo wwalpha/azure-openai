@@ -26,3 +26,7 @@
 - 完全ではない文章
   - 問題集は一部抜き取られたから、AI は理解できない
 - 文章のタブ分類がないため、AI はカテゴリー理解できない
+
+## References
+- [Azure SDK for Javascrpt/Typescript](https://github.com/Azure/azure-sdk-for-js)
+- [日本マイクロソフトの社員有志により作成・公開のサンプル](https://github.com/Azure-Samples/jp-azureopenai-samples)
