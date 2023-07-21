@@ -8,6 +8,8 @@
 - Azure App Service
 - Terraform
 
+## Architecture
+
 ## Total Costs
 一番安いの `East US` リージョンを基準とする
 
