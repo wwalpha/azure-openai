@@ -2,6 +2,11 @@ output "api_gateway_url" {
   value = module.computing.api_gateway_url
 }
 
-output "storage_container_url" {
-  value = module.storage.storage_container_url
+output "static_app_api_key" {
+  sensitive = true
+  value     = module.computing.static_app_apikey
+}
+
+output "static_app_url" {
+  value = module.computing.static_app_url
 }
