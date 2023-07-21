@@ -20,16 +20,35 @@ resource "azurerm_linux_web_app" "this" {
   https_only          = true
 
   site_config {
-    always_on           = false
-    minimum_tls_version = 1.2
+    always_on                               = false
+    minimum_tls_version                     = 1.2
+    container_registry_use_managed_identity = true
+
+    application_stack {
+      docker_image_name        = "openai:latest"
+      docker_registry_username = var.acr_admin_username
+      docker_registry_password = var.acr_admin_password
+      docker_registry_url      = "https://${var.acr_login_server}"
+    }
+  }
+
+  identity {
+    type = "SystemAssigned"
   }
 
   app_settings = {
-    DOCKER_REGISTRY_SERVER_URL      = var.acr_login_server
-    DOCKER_REGISTRY_SERVER_USERNAME = var.acr_admin_username
-    DOCKER_REGISTRY_SERVER_PASSWORD = var.acr_admin_password
-    WEBSITES_PORT                   = 8080
+    WEBSITES_ENABLE_APP_SERVICE_STORAGE = false
+    WEBSITES_PORT                       = 8080
   }
+}
+
+# ----------------------------------------------------------------------------------------------
+# Azure Role Assignment
+# ----------------------------------------------------------------------------------------------
+resource "azurerm_role_assignment" "app" {
+  scope                = data.azurerm_resource_group.this.id
+  role_definition_name = "AcrPull"
+  principal_id         = azurerm_linux_web_app.this.identity[0].principal_id
 }
 
 # ----------------------------------------------------------------------------------------------
