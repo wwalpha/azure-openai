@@ -4,6 +4,7 @@
 - TypeScript
 - React
 - Azure OpenAI Service
+- Azure Cognitive search
 - Azure App Service
 - Terraform
 
