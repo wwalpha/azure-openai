@@ -1,4 +1,4 @@
-name: PUSH_B) Backend Deploy
+name: App Service Deploy
 
 on:
   push:

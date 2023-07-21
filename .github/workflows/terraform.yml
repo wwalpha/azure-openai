@@ -1,4 +1,4 @@
-name: PUSH_B) Terraform
+name: Terraform Apply
 
 on:
   push:
