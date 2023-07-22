@@ -1,9 +1,10 @@
-# azure-openai
+# Azure OpenAI
+Azure OpenAI サービスを使った実際に動くデモ集です。
 
 ## 事前準備
 - You can apply for access to Azure OpenAI Service by completing the form at https://aka.ms/oai/access
 
-## Core Technology
+## Technology
 - TypeScript
 - React
 - Azure OpenAI Service
@@ -22,6 +23,11 @@
   - $80.3/month
 - App Service Plan (Free Plan)
   - 60 CPU minutes/day
+
+## 用語集
+用語|意味
+---|---
+LLM|大規模言語モデル(Large Language Model), 大量の`テキストデータ`を学習して構成された`AI`モデル。<br />従来の言語処理技術とは一線を画し、高精度にテキストの内容をとらえ、質問に答えたりすることができる
 
 ## 向いてない事
 - 画像関連の文章
