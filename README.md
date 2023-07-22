@@ -5,12 +5,12 @@ Azure OpenAI サービスを使った実際に動くデモ集です。
 - You can apply for access to Azure OpenAI Service by completing the form at https://aka.ms/oai/access
 
 ## Technology
-- TypeScript
-- React
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://react.dev/)
 - Azure OpenAI Service
 - Azure Cognitive search
 - Azure App Service
-- Terraform
+- [Terraform](https://www.terraform.io/)
 
 ## Architecture
 
