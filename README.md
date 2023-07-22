@@ -33,3 +33,5 @@
 ## References
 - [Azure SDK for Javascrpt/Typescript](https://github.com/Azure/azure-sdk-for-js)
 - [日本マイクロソフトの社員有志により作成・公開のサンプル](https://github.com/Azure-Samples/jp-azureopenai-samples)
+- [Azure OpenAI Service を利用したエンタープライズアーキテクチャのメモ](https://qiita.com/nohanaga/items/a18009f8b605591348fe)
+- 
