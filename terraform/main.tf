@@ -26,11 +26,11 @@ provider "azurerm" {
     }
   }
 
-  # use_msi = true
+  use_msi = true
 }
 
 provider "azuread" {
-  # use_msi = true
+  use_msi = true
 }
 
 resource "azurerm_resource_group" "this" {
@@ -69,7 +69,5 @@ module "computing" {
   suffix                  = local.suffix
   resource_group_name     = azurerm_resource_group.this.name
   resource_group_location = azurerm_resource_group.this.location
-  # acr_admin_username      = module.storage.container_registry_admin_username
-  # acr_admin_password      = module.storage.container_registry_admin_password
-  acr_login_server = module.storage.container_registry_login_server
+  acr_login_server        = module.storage.container_registry_login_server
 }
